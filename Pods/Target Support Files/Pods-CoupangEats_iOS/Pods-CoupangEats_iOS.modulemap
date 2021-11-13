@@ -1,0 +1,6 @@
+framework module Pods_CoupangEats_iOS {
+  umbrella header "Pods-CoupangEats_iOS-umbrella.h"
+
+  export *
+  module * { export * }
+}

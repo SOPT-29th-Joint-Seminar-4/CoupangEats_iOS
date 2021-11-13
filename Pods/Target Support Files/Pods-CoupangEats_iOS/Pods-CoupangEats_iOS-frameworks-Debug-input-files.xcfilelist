@@ -1,0 +1,4 @@
+${PODS_ROOT}/Target Support Files/Pods-CoupangEats_iOS/Pods-CoupangEats_iOS-frameworks.sh
+${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework
+${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework
+${BUILT_PRODUCTS_DIR}/Then/Then.framework
