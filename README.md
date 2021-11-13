@@ -14,7 +14,7 @@
   <tr>
     <td align="center"><a href="https://github.com/Kim-jisoo11"><img src="https://user-images.githubusercontent.com/75469131/141610604-148269a0-6332-420c-9e71-73d1407d30d1.png" width="300px;" alt=""/><br /><sub><b>Kim-jisoo11</b></sub></a><br /><a href="https://github.com/SOPT-29th-Joint-Seminar-4/CoupangEats_iOS/commits?author=Kim-jisoo11" title="Code">📱</a></td>
     <td align="center"><a href="https://github.com/parkikbum"><img src="https://user-images.githubusercontent.com/75469131/141610601-be775b84-8aba-4810-bf97-9238557d1ec1.png" width="300px;" alt=""/><br /><sub><b>parkikbum</b></sub></a><br /><a href="https://github.com/SOPT-29th-Joint-Seminar-4/CoupangEats_iOS/commits?author=parkikbum" title="Code">📱</a></td>
-    <td align="center"><a href="https://github.com/seondal"><img src="https://user-images.githubusercontent.com/75469131/141610604-148269a0-6332-420c-9e71-73d1407d30d1.png" width="300px;" alt=""/><br /><sub><b>seondal</b></sub></a><br /><a href="https://github.com/SOPT-29th-Joint-Seminar-4/CoupangEats_iOS/commits?author=seondal" title="Code">📱</a></td>
+    <td align="center"><a href="https://github.com/seondal"><img src="https://user-images.githubusercontent.com/75469131/141610823-e3bbae30-3cf4-475d-8e1f-1df2ad1cd4b4.png" width="300px;" alt=""/><br /><sub><b>seondal</b></sub></a><br /><a href="https://github.com/SOPT-29th-Joint-Seminar-4/CoupangEats_iOS/commits?author=seondal" title="Code">📱</a></td>
   </tr>
 </table>
 
