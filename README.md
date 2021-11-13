@@ -1,38 +1,40 @@
 # CoupangEats_iOS
-
-🚀 ﹤ 🍎 쿠팡이츠 최강 아요 ~~~~
-
-
-클디 합동세미나 : 쿠팡이츠 디자인 + Client_iOS
-진행 기간(5차 세미나) : 2021.11.13 ~ 2021.11.19
+> 🚀 ﹤ 🍎 쿠팡이츠 최강 아요 ~~~~
 
 <br>
 
-## 👨‍👩‍👦 팀원소개
+## 🗓 Duration
+
+- 클+디 합동세미나 (Client_iOS + Design)
+- [5차] `2021.11.13` ~ `2021.11.19`
+
+<br>
+
+## 👨‍👩‍👦 Member
 
 <table>
   <tr>
-    <td align="center"><a href="https://github.com/Kim-jisoo11"><img src="https://user-images.githubusercontent.com/75469131/141610604-148269a0-6332-420c-9e71-73d1407d30d1.png" width="300px;" alt=""/><br /><sub><b>Kim-jisoo11</b></sub></a><br /><a href="https://github.com/SOPT-29th-Joint-Seminar-4/CoupangEats_iOS/commits?author=Kim-jisoo11" title="Code">📱</a></td>
-    <td align="center"><a href="https://github.com/parkikbum"><img src="https://user-images.githubusercontent.com/75469131/141610601-be775b84-8aba-4810-bf97-9238557d1ec1.png" width="300px;" alt=""/><br /><sub><b>parkikbum</b></sub></a><br /><a href="https://github.com/SOPT-29th-Joint-Seminar-4/CoupangEats_iOS/commits?author=parkikbum" title="Code">📱</a></td>
-    <td align="center"><a href="https://github.com/seondal"><img src="https://user-images.githubusercontent.com/75469131/141610823-e3bbae30-3cf4-475d-8e1f-1df2ad1cd4b4.png" width="300px;" alt=""/><br /><sub><b>seondal</b></sub></a><br /><a href="https://github.com/SOPT-29th-Joint-Seminar-4/CoupangEats_iOS/commits?author=seondal" title="Code">📱</a></td>
+    <td align="center"><a href="https://github.com/Kim-jisoo11"><img src="https://user-images.githubusercontent.com/75469131/141610604-148269a0-6332-420c-9e71-73d1407d30d1.png" width="300px;" alt=""/><br /><sub size="100px"><b>Kim-jisoo11</b></sub></a><br /><a href="https://github.com/SOPT-29th-Joint-Seminar-4/CoupangEats_iOS/commits?author=Kim-jisoo11" title="Code">⌨</a></td>
+    <td align="center"><a href="https://github.com/parkikbum"><img src="https://user-images.githubusercontent.com/75469131/141610601-be775b84-8aba-4810-bf97-9238557d1ec1.png" width="300px;" alt=""/><br /><sub><b>parkikbum</b></sub></a><br /><a href="https://github.com/SOPT-29th-Joint-Seminar-4/CoupangEats_iOS/commits?author=parkikbum" title="Code">⌨</a></td>
+    <td align="center"><a href="https://github.com/seondal"><img src="https://user-images.githubusercontent.com/75469131/141610823-e3bbae30-3cf4-475d-8e1f-1df2ad1cd4b4.png" width="300px;" alt=""/><br /><sub><b>seondal</b></sub></a><br /><a href="https://github.com/SOPT-29th-Joint-Seminar-4/CoupangEats_iOS/commits?author=seondal" title="Code">⌨</a></td>
   </tr>
 </table>
 
 <br>
 
-## 📺 최종 구현 화면 
+## 📺 Final Screen
 
 기대해주세요 ㅋㅋ
 
 <br>
 
-## ⚙️개발 환경
+## ⚙️ Development Environment
 iOS 15.0+
 Xcode 13.0 
 
 <br>
 
-## 📄 라이브러리
+## 📄 Library
 |라이브러리(Library)|목적(Purpose)|버전(Version)|
 |-|-|-|
 |SnapKit|코드베이스 레이아웃을 조금 더 편하게! |ㅋㅋ비밀|
@@ -41,13 +43,16 @@ Xcode 13.0
 
 <br>
 
-## 💬 커밋 컨벤션
+## 💬 Commit Convention
 
-[Commit Type] 추가한 기능 설명
-기능 하나 구현하고 커밋하기
-커밋메시지에 구현 중 절대❌❌❌❌❌❌❌❌❌❌❌
+**[Commit Type] 추가한 기능 설명**
 
-Commit Type
+> 기능 하나 구현하고 커밋하기
+
+> 커밋메시지에 구현 중 절대❌❌❌❌❌❌❌❌❌❌❌
+
+[Commit Type]
+
 * 🚑️[HOTFIX] : issue나, QA에서 급한 버그 수정에 사용
 * 🔨[FIX] : 버그, 오류 해결
 * ➕[ADD] : Feat 이외의 부수적인 코드 추가, 라이브러리 추가, 새로운 파일 생성 시
