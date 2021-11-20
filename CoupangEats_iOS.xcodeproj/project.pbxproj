@@ -14,16 +14,16 @@
 		36215186273F92AB0021C0DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36215184273F92AB0021C0DD /* Main.storyboard */; };
 		36215188273F92AB0021C0DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36215187273F92AB0021C0DD /* Assets.xcassets */; };
 		3621518B273F92AB0021C0DD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36215189273F92AB0021C0DD /* LaunchScreen.storyboard */; };
-		362151AB273F93D70021C0DD /* dd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362151AA273F93D70021C0DD /* dd.swift */; };
 		362151B3273F941C0021C0DD /* SubView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 362151B2273F941C0021C0DD /* SubView.storyboard */; };
 		362151B5273F944A0021C0DD /* SubViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362151B4273F944A0021C0DD /* SubViewVC.swift */; };
 		362151B7273F949E0021C0DD /* HomeView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 362151B6273F949E0021C0DD /* HomeView.storyboard */; };
 		362151B9273F94B60021C0DD /* HomeViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362151B8273F94B60021C0DD /* HomeViewVC.swift */; };
+		3653F0D32748B1DB00701121 /* InEatsCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3653F0D12748B1DB00701121 /* InEatsCVC.swift */; };
+		3653F0D42748B1DB00701121 /* InEatsCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3653F0D22748B1DB00701121 /* InEatsCVC.xib */; };
 		3691C4E4273F97B800A712C9 /* UIColor++.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3691C4E3273F97B800A712C9 /* UIColor++.swift */; };
 		3691C4E6273F990F00A712C9 /* UITableView++.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3691C4E5273F990F00A712C9 /* UITableView++.swift */; };
 		3691C4E8273F996500A712C9 /* UICollectionView++.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3691C4E7273F996500A712C9 /* UICollectionView++.swift */; };
 		3691C4EA273F9A0100A712C9 /* dummy1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3691C4E9273F9A0100A712C9 /* dummy1.swift */; };
-		3691C4EC273F9A0900A712C9 /* dummy2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3691C4EB273F9A0900A712C9 /* dummy2.swift */; };
 		3691C4EE273F9A1200A712C9 /* dummy3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3691C4ED273F9A1200A712C9 /* dummy3.swift */; };
 		3691C4F0273F9A1B00A712C9 /* dummy4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3691C4EF273F9A1B00A712C9 /* dummy4.swift */; };
 /* End PBXBuildFile section */
@@ -37,16 +37,16 @@
 		36215187273F92AB0021C0DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3621518A273F92AB0021C0DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3621518C273F92AB0021C0DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		362151AA273F93D70021C0DD /* dd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dd.swift; sourceTree = "<group>"; };
 		362151B2273F941C0021C0DD /* SubView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SubView.storyboard; sourceTree = "<group>"; };
 		362151B4273F944A0021C0DD /* SubViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubViewVC.swift; sourceTree = "<group>"; };
 		362151B6273F949E0021C0DD /* HomeView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeView.storyboard; sourceTree = "<group>"; };
 		362151B8273F94B60021C0DD /* HomeViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewVC.swift; sourceTree = "<group>"; };
+		3653F0D12748B1DB00701121 /* InEatsCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InEatsCVC.swift; sourceTree = "<group>"; };
+		3653F0D22748B1DB00701121 /* InEatsCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InEatsCVC.xib; sourceTree = "<group>"; };
 		3691C4E3273F97B800A712C9 /* UIColor++.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor++.swift"; sourceTree = "<group>"; };
 		3691C4E5273F990F00A712C9 /* UITableView++.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView++.swift"; sourceTree = "<group>"; };
 		3691C4E7273F996500A712C9 /* UICollectionView++.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView++.swift"; sourceTree = "<group>"; };
 		3691C4E9273F9A0100A712C9 /* dummy1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dummy1.swift; sourceTree = "<group>"; };
-		3691C4EB273F9A0900A712C9 /* dummy2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dummy2.swift; sourceTree = "<group>"; };
 		3691C4ED273F9A1200A712C9 /* dummy3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dummy3.swift; sourceTree = "<group>"; };
 		3691C4EF273F9A1B00A712C9 /* dummy4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dummy4.swift; sourceTree = "<group>"; };
 		E2A70436DE2F44371FE8D0E3 /* Pods-CoupangEats_iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoupangEats_iOS.release.xcconfig"; path = "Target Support Files/Pods-CoupangEats_iOS/Pods-CoupangEats_iOS.release.xcconfig"; sourceTree = "<group>"; };
@@ -165,7 +165,7 @@
 		3621519E273F93680021C0DD /* CVC */ = {
 			isa = PBXGroup;
 			children = (
-				3691C4EB273F9A0900A712C9 /* dummy2.swift */,
+				3653F0D12748B1DB00701121 /* InEatsCVC.swift */,
 			);
 			path = CVC;
 			sourceTree = "<group>";
@@ -198,7 +198,7 @@
 		362151A8273F93A70021C0DD /* Xibs */ = {
 			isa = PBXGroup;
 			children = (
-				362151AA273F93D70021C0DD /* dd.swift */,
+				3653F0D52748B1EE00701121 /* CVC */,
 			);
 			path = Xibs;
 			sourceTree = "<group>";
@@ -228,6 +228,14 @@
 			path = Xibs;
 			sourceTree = "<group>";
 		};
+		3653F0D52748B1EE00701121 /* CVC */ = {
+			isa = PBXGroup;
+			children = (
+				3653F0D22748B1DB00701121 /* InEatsCVC.xib */,
+			);
+			path = CVC;
+			sourceTree = "<group>";
+		};
 		3691C4E2273F976100A712C9 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
@@ -244,7 +252,6 @@
 				F0087A4B1C450763D4C72B29 /* Pods-CoupangEats_iOS.debug.xcconfig */,
 				E2A70436DE2F44371FE8D0E3 /* Pods-CoupangEats_iOS.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -320,6 +327,7 @@
 				3621518B273F92AB0021C0DD /* LaunchScreen.storyboard in Resources */,
 				36215188273F92AB0021C0DD /* Assets.xcassets in Resources */,
 				362151B3273F941C0021C0DD /* SubView.storyboard in Resources */,
+				3653F0D42748B1DB00701121 /* InEatsCVC.xib in Resources */,
 				36215186273F92AB0021C0DD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -373,17 +381,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3653F0D32748B1DB00701121 /* InEatsCVC.swift in Sources */,
 				36215183273F92AB0021C0DD /* ViewController.swift in Sources */,
 				3691C4E8273F996500A712C9 /* UICollectionView++.swift in Sources */,
 				362151B5273F944A0021C0DD /* SubViewVC.swift in Sources */,
-				362151AB273F93D70021C0DD /* dd.swift in Sources */,
 				3691C4F0273F9A1B00A712C9 /* dummy4.swift in Sources */,
 				3691C4E4273F97B800A712C9 /* UIColor++.swift in Sources */,
 				3621517F273F92AB0021C0DD /* AppDelegate.swift in Sources */,
 				3691C4EE273F9A1200A712C9 /* dummy3.swift in Sources */,
 				3691C4E6273F990F00A712C9 /* UITableView++.swift in Sources */,
 				36215181273F92AB0021C0DD /* SceneDelegate.swift in Sources */,
-				3691C4EC273F9A0900A712C9 /* dummy2.swift in Sources */,
 				3691C4EA273F9A0100A712C9 /* dummy1.swift in Sources */,
 				362151B9273F94B60021C0DD /* HomeViewVC.swift in Sources */,
 			);
