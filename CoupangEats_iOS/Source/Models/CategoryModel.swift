@@ -6,3 +6,10 @@
 //
 
 import Foundation
+
+struct CategoryModel{
+    var imageName: String
+    var category: String
+}
+
+
