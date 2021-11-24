@@ -9,6 +9,7 @@
 import UIKit
 
 class selectCVC: UICollectionViewCell {
+  static let identifier = "selectCVC"
     
     @IBOutlet weak var backGroundView: UIView!
     @IBOutlet weak var selectLabel: UILabel!
@@ -36,7 +37,7 @@ class selectCVC: UICollectionViewCell {
         backGroundView.layer.borderColor = CGColor.init(red: 224.0/250.0, green: 227.0/250.0, blue: 231.0/255.0, alpha: 1.0)
         backGroundView.clipsToBounds = true
         backGroundView.layer.borderWidth = 1
-        backGroundView.layer.cornerRadius = 20
+        backGroundView.layer.cornerRadius = 15
     }
 
 

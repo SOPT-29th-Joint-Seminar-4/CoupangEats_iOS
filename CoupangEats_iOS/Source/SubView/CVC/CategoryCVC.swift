@@ -8,6 +8,8 @@
 import UIKit
 
 class CategoryCVC: UICollectionViewCell {
+  static let identifier = "CategoryCVC"
+  
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var categoryLabel: UILabel!
     

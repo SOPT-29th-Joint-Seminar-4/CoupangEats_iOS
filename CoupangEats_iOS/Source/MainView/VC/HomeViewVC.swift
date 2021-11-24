@@ -68,12 +68,30 @@ class HomeViewVC: UIViewController {
     super.viewDidLoad()
     view.backgroundColor = .white
     navigationController?.navigationBar.isHidden = true
+    self.choicefilterCollectionView.delegate = self
+    self.choicefilterCollectionView.dataSource = self
+    self.onlyEatsCollectionView.delegate = self
+    self.onlyEatsCollectionView.dataSource = self
+    self.menutypeCollectionView.delegate = self
+    self.menutypeCollectionView.dataSource = self
+    registerXib()
     layout()
+    let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.moremenuButtonClicked))
+    tapGestureRecognizer.isEnabled = true
+    tapGestureRecognizer.numberOfTapsRequired = 1
+    ///이미지뷰는 터치가 원래 안되니까 터치 가능하도록
+    self.moremenuImage.isUserInteractionEnabled = true
+    self.moremenuView.addGestureRecognizer(tapGestureRecognizer)
   }
 }
 
 //MARK: - Extension
 extension HomeViewVC {
+  func registerXib() {
+    choicefilterCollectionView.registerCustomXib(xibName: "selectCVC")
+    onlyEatsCollectionView.registerCustomXib(xibName: "InEatsCVC")
+    menutypeCollectionView.registerCustomXib(xibName: "CategoryCVC")
+  }
   
   //MARK: - Layout Helper
   func layout() {
@@ -104,7 +122,7 @@ extension HomeViewVC {
   }
   func layoutTopNavigationBar() {
     self.view.add(topNavigationBar) {
-      $0.backgroundColor = .orange
+      $0.backgroundColor = .white
       $0.snp.makeConstraints {
         $0.top.equalTo(self.view.safeAreaLayoutGuide.snp.top)
         $0.leading.equalToSuperview()
@@ -115,7 +133,7 @@ extension HomeViewVC {
   }
   func layoutTopInIcon() {
     self.topNavigationBar.add(toppinIcon) {
-      $0.setImageByName("")
+      $0.setImageByName("ic_GPS")
       $0.snp.makeConstraints {
         $0.centerY.equalTo(self.topNavigationBar)
         $0.leading.equalTo(self.topNavigationBar.snp.leading).offset(101)
@@ -135,7 +153,7 @@ extension HomeViewVC {
   }
   func layoutTopExtraIcon() {
     self.topNavigationBar.add(topextraIcon) {
-      $0.setImageByName("")
+      $0.setImageByName("BlueUnderbar")
       $0.snp.makeConstraints {
         $0.centerY.equalTo(self.topNavigationBar)
         $0.leading.equalTo(self.topaddressLabel.snp.trailing).offset(9)
@@ -146,7 +164,7 @@ extension HomeViewVC {
   }
   func layoutTopSearchIcon() {
     self.topNavigationBar.add(topsearchIcon) {
-      $0.setImageByName("")
+      $0.setImageByName("ic_search")
       $0.snp.makeConstraints {
         $0.centerY.equalTo(self.topNavigationBar)
         $0.trailing.equalTo(self.topNavigationBar.snp.trailing).offset(-18)
@@ -180,7 +198,7 @@ extension HomeViewVC {
   }
   func layoutAdvertiseImage() {
     self.mainScrollContainerView.add(advertiseImage) {
-      $0.image = UIImage(named: "")
+      $0.image = UIImage(named: "img_ad")
       $0.snp.makeConstraints {
         $0.top.equalTo(self.mainScrollContainerView.snp.top)
         $0.leading.equalTo(self.mainScrollContainerView.snp.leading)
@@ -203,7 +221,7 @@ extension HomeViewVC {
   }
   func layoutMoreMenuImage() {
     self.mainScrollContainerView.add(moremenuImage) {
-      $0.image = UIImage(named: "")
+      $0.image = UIImage(named: "coupangeats_ad2 1")
       $0.snp.makeConstraints {
         $0.top.equalTo(self.menutypeCollectionView.snp.bottom)
         $0.leading.equalTo(self.mainScrollContainerView.snp.leading)
@@ -214,6 +232,7 @@ extension HomeViewVC {
   }
   func layoutMoreMenuView() {
     self.moremenuImage.add(moremenuView) {
+      $0.isUserInteractionEnabled = true
       $0.backgroundColor = .mainOrange
       $0.setRounded(radius: 8)
       $0.snp.makeConstraints {
@@ -235,16 +254,18 @@ extension HomeViewVC {
   }
   func layoutMoreMenuButton() {
     self.moremenuView.add(moremenuButton) {
-      $0.setImageByName("")
+      $0.setImageByName("whiteGoButton")
       $0.snp.makeConstraints {
         $0.centerY.equalTo(self.moremenuView.snp.centerY)
         $0.leading.equalTo(self.moremenuLabel.snp.trailing).offset(6)
+        $0.height.equalTo(22)
+        $0.width.equalTo(10)
       }
     }
   }
   func layoutGray1backView() {
     self.mainScrollContainerView.add(gray1backView) {
-      $0.backgroundColor = .lightGray
+      $0.backgroundColor = .backgroundGray
       $0.snp.makeConstraints {
         $0.top.equalTo(self.moremenuImage.snp.bottom)
         $0.leading.trailing.equalToSuperview()
@@ -263,7 +284,7 @@ extension HomeViewVC {
   }
   func layoutOnlyEatsLabel() {
     self.onlyEatsContainerView.add(onlyEatsLabel) {
-      $0.setupLabel(text: "", color: .black, font: .systemFont(ofSize: 17, weight: .regular))
+      $0.setupLabel(text: "이츠에만 있는 맛집", color: .black, font: .systemFont(ofSize: 17, weight: .regular))
       $0.snp.makeConstraints {
         $0.top.equalTo(self.onlyEatsContainerView.snp.top).offset(10)
         $0.leading.equalToSuperview().offset(16)
@@ -272,7 +293,7 @@ extension HomeViewVC {
   }
   func layoutOnlyEatsGopageButton() {
     self.onlyEatsContainerView.add(onlyEatsgopageButton) {
-      $0.setImageByName("")
+      $0.setImageByName("ic_more")
       $0.snp.makeConstraints {
         $0.top.equalTo(self.onlyEatsContainerView.snp.top).offset(3)
         $0.trailing.equalTo(self.onlyEatsContainerView.snp.trailing).offset(-7)
@@ -287,7 +308,7 @@ extension HomeViewVC {
       $0.showsHorizontalScrollIndicator = false
       $0.snp.makeConstraints {
         $0.top.equalTo(self.onlyEatsContainerView.snp.bottom)
-        $0.leading.equalTo(self.mainScrollContainerView.snp.leading)
+        $0.leading.equalTo(self.mainScrollContainerView.snp.leading).offset(16.5)
         $0.trailing.equalTo(self.mainScrollContainerView.snp.trailing)
         $0.height.equalTo(220)
       }
@@ -295,7 +316,7 @@ extension HomeViewVC {
   }
   func layoutGray2BackView() {
     self.mainScrollContainerView.add(gray2backView) {
-      $0.backgroundColor = .lightGray
+      $0.backgroundColor = .backgroundGray
       $0.snp.makeConstraints {
         $0.top.equalTo(self.onlyEatsCollectionView.snp.bottom)
         $0.leading.equalTo(self.mainScrollContainerView.snp.leading)
@@ -337,7 +358,7 @@ extension HomeViewVC {
   }
   func layoutChoiceEatsImageView1() {
     self.mainScrollContainerView.add(choiceEatsImageView1) {
-      $0.image = UIImage(named: "")
+      $0.image = UIImage(named: "onlyEatsImage1")
       $0.snp.makeConstraints {
         $0.top.equalTo(self.choicefilterCollectionView.snp.bottom).offset(16)
         $0.centerX.equalToSuperview()
@@ -348,7 +369,7 @@ extension HomeViewVC {
   }
   func layoutChoiceEatsImageView2() {
     self.mainScrollContainerView.add(choiceEatsImageView2) {
-      $0.image = UIImage(named: "")
+      $0.image = UIImage(named: "onlyEatsImage2")
       $0.snp.makeConstraints {
         $0.top.equalTo(self.choiceEatsImageView1.snp.bottom)
         $0.centerX.equalToSuperview()
@@ -358,20 +379,87 @@ extension HomeViewVC {
       }
     }
   }
+  @objc func moremenuButtonClicked(_ sender: UITapGestureRecognizer) {
+    print("d")
+    guard let subVC = UIStoryboard(name: "SubView", bundle: nil).instantiateViewController(withIdentifier: "SubViewVC") as? SubViewVC else {return}
+    self.navigationController?.pushViewController(subVC, animated: true)
+  }
 }
 
-//// MARK: - Extension
-//extension HomeViewVC : UICollectionViewDelegate {
-//
-//}
-//extension HomeViewVC : UICollectionViewDataSource {
-//  func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-//    <#code#>
-//  }
-//
-//  func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-//    <#code#>
-//  }
-//
-//
-//}
+// MARK: - UICollectionViewDelegate
+extension HomeViewVC : UICollectionViewDelegateFlowLayout {
+  func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+    if collectionView == menutypeCollectionView {
+      let cellWidth = 58
+      let cellHeight = 127
+      return CGSize(width: cellWidth, height: cellHeight)
+    }
+    if collectionView == onlyEatsCollectionView {
+      let cellWidth = 120
+      let cellHeight = 200
+      return CGSize(width: cellWidth, height: cellHeight)
+    }
+    if collectionView == choicefilterCollectionView {
+      let cellWidth = 74
+      let cellHeight = 28
+      return CGSize(width: cellWidth, height: cellHeight)
+    }
+    return CGSize(width: 50, height: 50)
+  }
+  func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+    return UIEdgeInsets.zero
+  }
+  func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+    if collectionView == menutypeCollectionView {
+      return 13
+    }
+    if collectionView == onlyEatsCollectionView {
+      return 21
+    }
+    if collectionView == choicefilterCollectionView {
+      return 10
+    }
+    return 20
+  }
+}
+
+// MARK: - UICollectionViewDataSource
+extension HomeViewVC : UICollectionViewDataSource {
+  func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    
+    if collectionView == menutypeCollectionView {
+      return 10
+    }
+    if collectionView == onlyEatsCollectionView {
+      return 5
+    }
+    if collectionView == choicefilterCollectionView {
+      return 6
+    }
+    else {
+      return 0
+    }
+  }
+  
+  func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    if collectionView == menutypeCollectionView {
+      guard let CategoryCVC = collectionView.dequeueReusableCell(withReuseIdentifier: CategoryCVC.identifier, for: indexPath) as? CategoryCVC else {return UICollectionViewCell() }
+      CategoryCVC.setData(image: "", category: "")
+      CategoryCVC.awakeFromNib()
+      return CategoryCVC
+    }
+    if collectionView == onlyEatsCollectionView  {
+      guard let InEatsCVC = collectionView.dequeueReusableCell(withReuseIdentifier: InEatsCVC.identifier, for: indexPath) as? InEatsCVC else {return UICollectionViewCell() }
+      InEatsCVC.getData(image: "", heart: true, title: "", time: "", star: "", distance: "", freeRide: true)
+      InEatsCVC.awakeFromNib()
+      return InEatsCVC
+    }
+    if collectionView == choicefilterCollectionView {
+      guard let selectCVC = collectionView.dequeueReusableCell(withReuseIdentifier: selectCVC.identifier, for: indexPath) as? selectCVC else {return UICollectionViewCell() }
+      selectCVC.setData(title: "", isImage: true)
+      selectCVC.awakeFromNib()
+      return selectCVC
+    }
+    return UICollectionViewCell()
+  }
+}

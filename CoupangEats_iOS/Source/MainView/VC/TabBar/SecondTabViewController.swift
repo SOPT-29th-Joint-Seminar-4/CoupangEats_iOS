@@ -11,7 +11,7 @@ class SecondTabViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    view.backgroundColor = .lightGray
+    view.backgroundColor = .white
     // Do any additional setup after loading the view.
   }
   
