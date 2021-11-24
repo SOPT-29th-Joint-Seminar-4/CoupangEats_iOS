@@ -10,6 +10,7 @@ import SnapKit
 import Then
 
 class InEatsCVC: UICollectionViewCell {
+  static let identifier = "InEatsCVC"
 
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var heartButton: UIButton!
@@ -30,7 +31,7 @@ class InEatsCVC: UICollectionViewCell {
     }
     
     func setLayout(){
-        freeRideView.layer.cornerRadius = 15
+        freeRideView.layer.cornerRadius = 5
         freeRideView.clipsToBounds = true
     }
     
