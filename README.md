@@ -5,8 +5,9 @@
 
 ## 🗓 Duration
 
-- 클+디 합동세미나 (Client_iOS + Design)
-- [5차] `2021.11.13` ~ `2021.11.19`
+- 클+디+서 합동세미나 (Client_iOS + Design + Server)
+- [5차] 클+디 세미나 `2021.11.13` ~ `2021.11.26`
+- [6차] 클+서 세미나 `2021.11.19` ~ `2021.12.03`
 
 <br>
 
@@ -19,6 +20,13 @@
     <td align="center"><a href="https://github.com/seondal"><img src="https://user-images.githubusercontent.com/75469131/141610823-e3bbae30-3cf4-475d-8e1f-1df2ad1cd4b4.png" width="300px;" alt=""/><br /><sub><b>seondal</b></sub></a><br /><a href="https://github.com/SOPT-29th-Joint-Seminar-4/CoupangEats_iOS/commits?author=seondal" title="Code">⌨</a></td>
   </tr>
 </table>
+
+<br>
+
+## 👨‍👩‍👦 역할분배
+|킹지수(Kim-jisoo11)|짱익범(parkikbum)|선달이(seondal)|
+|-|-|-|
+|메인뷰 레이아웃|메인뷰 컬렉션뷰 셀|서브뷰 전체|
 
 <br>
 
@@ -40,6 +48,17 @@ Xcode 13.0
 |SnapKit|코드베이스 레이아웃을 조금 더 편하게! |ㅋㅋ비밀|
 |Then|그 코드베이스 레이아웃을 잡는 스냅킷을 조금더 편하게!|ㅋㅋ비밀|
 |Alamofire|서버 통신|ㅋㅋ비밀|
+
+<br>
+
+## 📄 Git Convention
+> Git Flow
+- 1. Issue를 생성한다.
+- 2. feature Branch를 생성한다.
+- 3. Add - Commit - Push - Pull Request 의 과정을 거친다.
+- 4. Pull Request가 작성되면 작성자 이외의 다른 팀원이 Code Review를 한다.
+- 5. Code Review가 완료되면 Pull Request 작성자가 develop Branch로 merge 한다.
+- 6. 종료된 Issue와 Pull Request의 Label과 Project를 관리한다.
 
 <br>
 
