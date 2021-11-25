@@ -9,13 +9,20 @@ import UIKit
 
 class SubViewVC: UIViewController {
 
+    var contentList: [ContentData] = [];
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        initContentList()
         // Do any additional setup after loading the view.
     }
     
 
+    func initContentList() {
+        contentList.append(contentsOf: [
+            ContentData(thumbNailName: <#T##String#>, store: <#T##String#>, menu: <#T##String#>, count: <#T##String#>, price: <#T##String#>)
+        ])
+    }
     /*
     // MARK: - Navigation
 

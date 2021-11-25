@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 55;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -22,10 +22,11 @@
 		3691C4E4273F97B800A712C9 /* UIColor++.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3691C4E3273F97B800A712C9 /* UIColor++.swift */; };
 		3691C4E6273F990F00A712C9 /* UITableView++.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3691C4E5273F990F00A712C9 /* UITableView++.swift */; };
 		3691C4E8273F996500A712C9 /* UICollectionView++.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3691C4E7273F996500A712C9 /* UICollectionView++.swift */; };
-		3691C4EA273F9A0100A712C9 /* dummy1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3691C4E9273F9A0100A712C9 /* dummy1.swift */; };
 		3691C4EC273F9A0900A712C9 /* dummy2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3691C4EB273F9A0900A712C9 /* dummy2.swift */; };
 		3691C4EE273F9A1200A712C9 /* dummy3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3691C4ED273F9A1200A712C9 /* dummy3.swift */; };
-		3691C4F0273F9A1B00A712C9 /* dummy4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3691C4EF273F9A1B00A712C9 /* dummy4.swift */; };
+		9AC75DF02748C43100A45ADD /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC75DEE2748C43100A45ADD /* TableViewCell.swift */; };
+		9AC75DF12748C43100A45ADD /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9AC75DEF2748C43100A45ADD /* TableViewCell.xib */; };
+		9AC75DF32748CCD800A45ADD /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC75DF22748CCD800A45ADD /* DataModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,10 +46,11 @@
 		3691C4E3273F97B800A712C9 /* UIColor++.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor++.swift"; sourceTree = "<group>"; };
 		3691C4E5273F990F00A712C9 /* UITableView++.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView++.swift"; sourceTree = "<group>"; };
 		3691C4E7273F996500A712C9 /* UICollectionView++.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView++.swift"; sourceTree = "<group>"; };
-		3691C4E9273F9A0100A712C9 /* dummy1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dummy1.swift; sourceTree = "<group>"; };
 		3691C4EB273F9A0900A712C9 /* dummy2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dummy2.swift; sourceTree = "<group>"; };
 		3691C4ED273F9A1200A712C9 /* dummy3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dummy3.swift; sourceTree = "<group>"; };
-		3691C4EF273F9A1B00A712C9 /* dummy4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dummy4.swift; sourceTree = "<group>"; };
+		9AC75DEE2748C43100A45ADD /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		9AC75DEF2748C43100A45ADD /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
+		9AC75DF22748CCD800A45ADD /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		E2A70436DE2F44371FE8D0E3 /* Pods-CoupangEats_iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoupangEats_iOS.release.xcconfig"; path = "Target Support Files/Pods-CoupangEats_iOS/Pods-CoupangEats_iOS.release.xcconfig"; sourceTree = "<group>"; };
 		F0087A4B1C450763D4C72B29 /* Pods-CoupangEats_iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoupangEats_iOS.debug.xcconfig"; path = "Target Support Files/Pods-CoupangEats_iOS/Pods-CoupangEats_iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		FDCD0092442A603A0B4D4775 /* Pods_CoupangEats_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoupangEats_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -173,7 +175,8 @@
 		3621519F273F936C0021C0DD /* TVC */ = {
 			isa = PBXGroup;
 			children = (
-				3691C4E9273F9A0100A712C9 /* dummy1.swift */,
+				9AC75DEE2748C43100A45ADD /* TableViewCell.swift */,
+				9AC75DF22748CCD800A45ADD /* DataModel.swift */,
 			);
 			path = TVC;
 			sourceTree = "<group>";
@@ -223,7 +226,7 @@
 		362151AF273F93F40021C0DD /* Xibs */ = {
 			isa = PBXGroup;
 			children = (
-				3691C4EF273F9A1B00A712C9 /* dummy4.swift */,
+				9AC75DEF2748C43100A45ADD /* TableViewCell.xib */,
 			);
 			path = Xibs;
 			sourceTree = "<group>";
@@ -244,7 +247,6 @@
 				F0087A4B1C450763D4C72B29 /* Pods-CoupangEats_iOS.debug.xcconfig */,
 				E2A70436DE2F44371FE8D0E3 /* Pods-CoupangEats_iOS.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -294,7 +296,7 @@
 				};
 			};
 			buildConfigurationList = 36215176273F92AB0021C0DD /* Build configuration list for PBXProject "CoupangEats_iOS" */;
-			compatibilityVersion = "Xcode 13.0";
+			compatibilityVersion = "Xcode 12.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -317,6 +319,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				362151B7273F949E0021C0DD /* HomeView.storyboard in Resources */,
+				9AC75DF12748C43100A45ADD /* TableViewCell.xib in Resources */,
 				3621518B273F92AB0021C0DD /* LaunchScreen.storyboard in Resources */,
 				36215188273F92AB0021C0DD /* Assets.xcassets in Resources */,
 				362151B3273F941C0021C0DD /* SubView.storyboard in Resources */,
@@ -373,18 +376,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9AC75DF02748C43100A45ADD /* TableViewCell.swift in Sources */,
 				36215183273F92AB0021C0DD /* ViewController.swift in Sources */,
 				3691C4E8273F996500A712C9 /* UICollectionView++.swift in Sources */,
 				362151B5273F944A0021C0DD /* SubViewVC.swift in Sources */,
 				362151AB273F93D70021C0DD /* dd.swift in Sources */,
-				3691C4F0273F9A1B00A712C9 /* dummy4.swift in Sources */,
 				3691C4E4273F97B800A712C9 /* UIColor++.swift in Sources */,
+				9AC75DF32748CCD800A45ADD /* DataModel.swift in Sources */,
 				3621517F273F92AB0021C0DD /* AppDelegate.swift in Sources */,
 				3691C4EE273F9A1200A712C9 /* dummy3.swift in Sources */,
 				3691C4E6273F990F00A712C9 /* UITableView++.swift in Sources */,
 				36215181273F92AB0021C0DD /* SceneDelegate.swift in Sources */,
 				3691C4EC273F9A0900A712C9 /* dummy2.swift in Sources */,
-				3691C4EA273F9A0100A712C9 /* dummy1.swift in Sources */,
 				362151B9273F94B60021C0DD /* HomeViewVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -462,7 +465,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -517,7 +520,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -535,7 +538,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = U24ZACT97M;
+				DEVELOPMENT_TEAM = CLQU6VM4H9;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CoupangEats_iOS/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -564,7 +567,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = U24ZACT97M;
+				DEVELOPMENT_TEAM = CLQU6VM4H9;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CoupangEats_iOS/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
