@@ -10,6 +10,8 @@ import UIKit
 class SubViewVC: UIViewController {
 
     @IBOutlet weak var TableView: UITableView!
+    @IBOutlet weak var Separation: UIView!
+    @IBOutlet weak var TotalLabel: UILabel!
     
     var contentList: [ContentData] = [];
     
@@ -19,8 +21,14 @@ class SubViewVC: UIViewController {
         registerXib()
         TableView.delegate = self
         TableView.dataSource = self
+        initialSet()
     }
     
+    func initialSet() {
+        Separation.backgroundColor = UIColor.subtitleGray
+        let total : Int = contentList.count
+        TotalLabel.text = "총 \(total)개"
+    }
     func registerXib() {
         let xibName = UINib(nibName: TableViewCell.identifier, bundle: nil)
         TableView.register(xibName, forCellReuseIdentifier: TableViewCell.identifier)
@@ -43,6 +51,9 @@ extension SubViewVC: UITableViewDelegate {
 }
 
 extension SubViewVC: UITableViewDataSource {
+    
+    
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return contentList.count
     }
