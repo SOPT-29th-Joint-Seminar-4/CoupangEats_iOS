@@ -22,10 +22,18 @@ class TableViewCell: UITableViewCell {
     
     @IBOutlet weak var OrderNowButton: UIButton!
     @IBOutlet weak var SeeStoreButton: UIButton!
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+    }
+    
+    func setLayout() {
+        StoreLabel.font = UIFont.boldSystemFont(ofSize: 13)
+        CountLabel.font = UIFont.boldSystemFont(ofSize: 13)
+        CountLabel.textColor = UIColor.mainOrange
+        PriceLabel.font = UIFont.boldSystemFont(ofSize: 13)
+        DescriptionLabel.textColor = UIColor.subtitleGray
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -35,12 +43,11 @@ class TableViewCell: UITableViewCell {
     }
     
     func setData(appData : ContentData) {
+        ThumbnailImageView.image = appData.thumbnail()
         StoreLabel.text = appData.store
         MenuLabel.text = appData.menu
         CountLabel.text = appData.count
         PriceLabel.text = appData.price
-        DescriptionLabel.text = appData.price
-        
-        
+        DescriptionLabel.text = appData.description
     }
 }

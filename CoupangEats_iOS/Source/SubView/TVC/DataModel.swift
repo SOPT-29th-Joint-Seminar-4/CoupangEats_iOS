@@ -14,6 +14,7 @@ struct ContentData {
     let menu : String
     let count : String
     let price : String
+    let description : String
     
     func thumbnail() -> UIImage? {
         return UIImage(named: thumbNailName)

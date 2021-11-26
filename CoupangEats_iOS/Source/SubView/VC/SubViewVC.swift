@@ -9,28 +9,50 @@ import UIKit
 
 class SubViewVC: UIViewController {
 
+    @IBOutlet weak var TableView: UITableView!
+    
     var contentList: [ContentData] = [];
     
     override func viewDidLoad() {
         super.viewDidLoad()
         initContentList()
-        // Do any additional setup after loading the view.
+        registerXib()
+        TableView.delegate = self
+        TableView.dataSource = self
     }
     
+    func registerXib() {
+        let xibName = UINib(nibName: TableViewCell.identifier, bundle: nil)
+        TableView.register(xibName, forCellReuseIdentifier: TableViewCell.identifier)
+    }
 
     func initContentList() {
         contentList.append(contentsOf: [
-            ContentData(thumbNailName: <#T##String#>, store: <#T##String#>, menu: <#T##String#>, count: <#T##String#>, price: <#T##String#>)
+            ContentData(thumbNailName: "ChickenImage", store: "둘둘치킨 서현점", menu: "후라이드치킨", count: "46명이 만족한 메뉴", price: "18000원", description: "새 식용유를 매일 사용하여 건강하고 깨끗한 맛, 얇은 튀김옷으로 칼로리를 낮춘 담백한 치킨."),
+            ContentData(thumbNailName: "ChickenImage", store: "둘둘치킨 서현점", menu: "후라이드치킨", count: "46명이 만족한 메뉴", price: "18000원", description: "새 식용유를 매일 사용하여 건강하고 깨끗한 맛, 얇은 튀김옷으로 칼로리를 낮춘 담백한 치킨."),
+            ContentData(thumbNailName: "ChickenImage", store: "둘둘치킨 서현점", menu: "후라이드치킨", count: "46명이 만족한 메뉴", price: "18000원", description: "새 식용유를 매일 사용하여 건강하고 깨끗한 맛, 얇은 튀김옷으로 칼로리를 낮춘 담백한 치킨."),
+            ContentData(thumbNailName: "ChickenImage", store: "둘둘치킨 서현점", menu: "후라이드치킨", count: "46명이 만족한 메뉴", price: "18000원", description: "새 식용유를 매일 사용하여 건강하고 깨끗한 맛, 얇은 튀김옷으로 칼로리를 낮춘 담백한 치킨."),
         ])
     }
-    /*
-    // MARK: - Navigation
+}
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+extension SubViewVC: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 174
     }
-    */
+}
 
+extension SubViewVC: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return contentList.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: TableViewCell.identifier) as? TableViewCell else { return UITableViewCell() }
+        cell.setData(appData : contentList[indexPath.row])
+        cell.setLayout()
+        return cell
+    }
+    
+    
 }
