@@ -36,9 +36,10 @@ class InEatsCVC: UICollectionViewCell {
     }
     
     func getData(image: String, heart: Bool, title: String, time: String, star: String, distance: String, freeRide:Bool ){
-        if let imageURL = URL(string: image) {
-                    //킹피셔 써야겟다
-                }
+        imageView.image = UIImage(named: image)
+//        if let imageURL = URL(string: image) {
+//                    //킹피셔 써야겟다
+//                }
         isLike = heart
         titleLabel.text = title
         timeLabel.text = time

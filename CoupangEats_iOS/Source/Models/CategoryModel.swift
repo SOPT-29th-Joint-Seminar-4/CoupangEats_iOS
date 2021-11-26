@@ -13,3 +13,16 @@ struct CategoryModel{
 }
 
 
+struct inEatsModel{
+    var imageName: String
+    var title: String
+    var time: String
+    var star: String
+    var lenght: String
+    var isFree: Bool
+}
+
+struct selectDataModel{
+    var title: String
+    var isImage: Bool
+}

@@ -23,7 +23,6 @@ class selectCVC: UICollectionViewCell {
     }
     
     func setData(title: String, isImage: Bool){
-        selectLabel.text = title
 
         if isImage == false{
             selectImageView.isHidden = true
@@ -31,13 +30,16 @@ class selectCVC: UICollectionViewCell {
             notImageLabel.textAlignment = .center
             notImageLabel.text = title
         }
+        else{
+            selectLabel.text = title
+        }
     }
     
     func setLayout(){
         backGroundView.layer.borderColor = CGColor.init(red: 224.0/250.0, green: 227.0/250.0, blue: 231.0/255.0, alpha: 1.0)
         backGroundView.clipsToBounds = true
         backGroundView.layer.borderWidth = 1
-        backGroundView.layer.cornerRadius = 15
+        backGroundView.layer.cornerRadius = 13
     }
 
 

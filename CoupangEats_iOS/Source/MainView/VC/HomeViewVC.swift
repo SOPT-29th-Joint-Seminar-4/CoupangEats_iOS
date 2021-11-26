@@ -13,7 +13,46 @@ import Then
 
 //MARK: - HomeViewVC
 class HomeViewVC: UIViewController {
-  
+    
+    var categoryList: [CategoryModel] = []
+    var eatsList: [inEatsModel] = []
+    var selectList: [selectDataModel] = []
+
+
+//MARK: -DataModel
+    func initList() {
+        categoryList.append(contentsOf: [
+            CategoryModel(imageName: "new", category: "신규 맛집"),
+            CategoryModel(imageName: "single", category: "1인분"),
+            CategoryModel(imageName: "korean", category: "한식"),
+            CategoryModel(imageName: "chicken", category: "치킨"),
+            CategoryModel(imageName: "snack", category: "분식"),
+            CategoryModel(imageName: "cutlet", category: "돈까스"),
+            CategoryModel(imageName: "meat", category: "족발/보쌈"),
+            CategoryModel(imageName: "sandwich", category: "샌드위치"),
+            CategoryModel(imageName: "coffee", category: "커피"),
+            CategoryModel(imageName: "dessert", category: "디저트")
+        ])
+        
+        eatsList.append(contentsOf: [
+            inEatsModel(imageName: "img_store1", title: "피자헛", time: "20~25분", star: "4.8(4,805)", lenght: "2.2km", isFree: true),
+            inEatsModel(imageName: "img_store2", title: "세인트 버거", time: "15~20분", star: "4.6(1,005)", lenght: "1.5km", isFree: true),
+            inEatsModel(imageName: "img_store3", title: "페이브", time: "19~29분", star: "4.9(2,832)", lenght: "1.3km", isFree: true),
+            inEatsModel(imageName: "img_store4", title: "리미니", time: "23~33분", star: "4.8(2,126)", lenght: "1.8km", isFree: true),
+            inEatsModel(imageName: "img_store1", title: "샐러디", time: "15~25분", star: "4.7(562)", lenght: "1.4km", isFree: true)
+        ])
+        
+        selectList.append(contentsOf: [
+            selectDataModel(title: "추천순", isImage: true),
+            selectDataModel(title: "치타배달", isImage: false),
+            selectDataModel(title: "배달비", isImage: true),
+            selectDataModel(title: "최소주문", isImage: true),
+            selectDataModel(title: "포장", isImage: false),
+            selectDataModel(title: "할인쿠폰", isImage: false)
+        ])
+        
+        
+    }
   //MARK: - Components
   let mainScrollView = UIScrollView()
   let mainScrollContainerView = UIView()
@@ -44,7 +83,7 @@ class HomeViewVC: UIViewController {
     layout.scrollDirection = .horizontal
     let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
     collectionView.isScrollEnabled = true
-    collectionView.isPagingEnabled = true
+      collectionView.isPagingEnabled = false
     return collectionView
   }()
   let gray2backView = UIView()
@@ -55,7 +94,7 @@ class HomeViewVC: UIViewController {
     layout.scrollDirection = .horizontal
     let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
     collectionView.isScrollEnabled = true
-    collectionView.isPagingEnabled = true
+    collectionView.isPagingEnabled = false
     return collectionView
   }()
   let choiceEatsImageView1 = UIImageView()
@@ -66,6 +105,7 @@ class HomeViewVC: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    initList()
     view.backgroundColor = .white
     navigationController?.navigationBar.isHidden = true
     self.choicefilterCollectionView.delegate = self
@@ -212,11 +252,12 @@ extension HomeViewVC {
     self.mainScrollContainerView.add(menutypeCollectionView) {
       $0.backgroundColor = .white
       $0.showsHorizontalScrollIndicator = false
+        $0.isPagingEnabled = false
       $0.snp.makeConstraints {
         $0.top.equalTo(self.advertiseImage.snp.bottom)
-        $0.leading.equalTo(self.mainScrollContainerView.snp.leading)
+          $0.leading.equalTo(self.mainScrollContainerView.snp.leading).offset(16)
         $0.trailing.equalTo(self.mainScrollContainerView.snp.trailing)
-        $0.height.equalTo(151)
+        $0.height.equalTo(120)
       }
     }
   }
@@ -285,7 +326,7 @@ extension HomeViewVC {
   }
   func layoutOnlyEatsLabel() {
     self.onlyEatsContainerView.add(onlyEatsLabel) {
-      $0.setupLabel(text: "이츠에만 있는 맛집", color: .black, font: .systemFont(ofSize: 17, weight: .regular))
+        $0.setupLabel(text: "이츠에만 있는 맛집", color: .black, font: .systemFont(ofSize: 17, weight: .bold))
       $0.snp.makeConstraints {
         $0.top.equalTo(self.onlyEatsContainerView.snp.top).offset(10)
         $0.leading.equalToSuperview().offset(16)
@@ -311,7 +352,7 @@ extension HomeViewVC {
         $0.top.equalTo(self.onlyEatsContainerView.snp.bottom)
         $0.leading.equalTo(self.mainScrollContainerView.snp.leading).offset(16.5)
         $0.trailing.equalTo(self.mainScrollContainerView.snp.trailing)
-        $0.height.equalTo(220)
+        $0.height.equalTo(200)
       }
     }
   }
@@ -338,7 +379,7 @@ extension HomeViewVC {
   }
   func layoutChoiceEatsLabel() {
     self.choiceEatsContainverView.add(choiceEatsLabel) {
-      $0.setupLabel(text: "골라먹는 맛집", color: .black, font: .systemFont(ofSize: 17, weight: .regular))
+        $0.setupLabel(text: "골라먹는 맛집", color: .black, font: .systemFont(ofSize: 17, weight: .bold))
       $0.snp.makeConstraints {
         $0.top.equalTo(self.choiceEatsContainverView.snp.top).offset(15)
         $0.leading.equalTo(self.choiceEatsContainverView.snp.leading).offset(16)
@@ -353,7 +394,7 @@ extension HomeViewVC {
         $0.top.equalTo(self.choiceEatsContainverView.snp.bottom)
         $0.leading.equalTo(self.mainScrollContainerView.snp.leading).offset(16)
         $0.trailing.equalTo(self.mainScrollContainerView.snp.trailing)
-        $0.height.equalTo(27)
+        $0.height.equalTo(33)
       }
     }
   }
@@ -401,11 +442,15 @@ extension HomeViewVC : UICollectionViewDelegateFlowLayout {
       return CGSize(width: cellWidth, height: cellHeight)
     }
     if collectionView == choicefilterCollectionView {
-      let cellWidth = 74
-      let cellHeight = 28
+        var cellHeight = 28
+      var cellWidth = selectList[indexPath.row].title.count * 20
+        if(selectList[indexPath.row].isImage == true){
+            cellWidth = cellWidth + 15
+        }
+      
       return CGSize(width: cellWidth, height: cellHeight)
     }
-    return CGSize(width: 50, height: 50)
+      return CGSize(width: 50, height: 50)
   }
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
     return UIEdgeInsets.zero
@@ -445,19 +490,19 @@ extension HomeViewVC : UICollectionViewDataSource {
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     if collectionView == menutypeCollectionView {
       guard let CategoryCVC = collectionView.dequeueReusableCell(withReuseIdentifier: CategoryCVC.identifier, for: indexPath) as? CategoryCVC else {return UICollectionViewCell() }
-      CategoryCVC.setData(image: "", category: "")
+        CategoryCVC.setData(image: categoryList[indexPath.row].imageName, category: categoryList[indexPath.row].category)
       CategoryCVC.awakeFromNib()
       return CategoryCVC
     }
     if collectionView == onlyEatsCollectionView  {
       guard let InEatsCVC = collectionView.dequeueReusableCell(withReuseIdentifier: InEatsCVC.identifier, for: indexPath) as? InEatsCVC else {return UICollectionViewCell() }
-      InEatsCVC.getData(image: "", heart: true, title: "", time: "", star: "", distance: "", freeRide: true)
+        InEatsCVC.getData(image: eatsList[indexPath.row].imageName, heart: true, title: eatsList[indexPath.row].title, time: eatsList[indexPath.row].time, star: eatsList[indexPath.row].star, distance: eatsList[indexPath.row].lenght, freeRide: eatsList[indexPath.row].isFree)
       InEatsCVC.awakeFromNib()
       return InEatsCVC
     }
     if collectionView == choicefilterCollectionView {
       guard let selectCVC = collectionView.dequeueReusableCell(withReuseIdentifier: selectCVC.identifier, for: indexPath) as? selectCVC else {return UICollectionViewCell() }
-      selectCVC.setData(title: "", isImage: true)
+        selectCVC.setData(title: selectList[indexPath.row].title, isImage: selectList[indexPath.row].isImage)
       selectCVC.awakeFromNib()
       return selectCVC
     }
