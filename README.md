@@ -10,6 +10,7 @@
 
 <br>
 
+
 ## 👨‍👩‍👦 Member
 
 <table>
@@ -24,9 +25,15 @@
 
 ## 📺 Final Screen
 
-기대해주세요 ㅋㅋ
-
+구현영상임둥 ㅋㅋ 쩐다 ㅋㅋ
 <br>
+<img src = "https://user-images.githubusercontent.com/63863135/143546679-730a96d9-c61a-4923-98b5-a812617d9221.gif" width = "300px;" alt =""/>
+<br>
+<br>
+&nbsp;<img src="https://user-images.githubusercontent.com/63863135/143547141-141f629d-1691-4918-bea1-14590151aad5.png" width="300px;" alt=""/> 
+&nbsp;<img src="https://user-images.githubusercontent.com/63863135/143546819-5a0b2248-9e0a-4e4e-803b-e3325dbe4ed0.png" width="300px;" alt=""/>
+<br>
+
 
 ## ⚙️ Development Environment
 iOS 15.0+
