@@ -12,6 +12,7 @@ class TableViewCell: UITableViewCell {
     static let identifier = "TableViewCell"
 
     @IBOutlet weak var ThumbnailImageView: UIImageView!
+    @IBOutlet weak var HeartIcon: UIButton!
     
     @IBOutlet weak var StoreLabel: UILabel!
     @IBOutlet weak var MenuLabel: UILabel!
