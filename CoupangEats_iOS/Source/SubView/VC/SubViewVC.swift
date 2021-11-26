@@ -12,6 +12,7 @@ class SubViewVC: UIViewController {
     @IBOutlet weak var TableView: UITableView!
     @IBOutlet weak var Separation: UIView!
     @IBOutlet weak var TotalLabel: UILabel!
+    @IBOutlet weak var backButton: UIButton!
     
     var contentList: [ContentData] = [];
     
@@ -33,7 +34,10 @@ class SubViewVC: UIViewController {
         let xibName = UINib(nibName: TableViewCell.identifier, bundle: nil)
         TableView.register(xibName, forCellReuseIdentifier: TableViewCell.identifier)
     }
-
+    @IBAction func backButtonClicked(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
     func initContentList() {
         contentList.append(contentsOf: [
             ContentData(thumbNailName: "ChickenImage", store: "둘둘치킨 서현점", menu: "후라이드치킨", count: "46명이 만족한 메뉴", price: "18000원", description: "새 식용유를 매일 사용하여 건강하고 깨끗한 맛, 얇은 튀김옷으로 칼로리를 낮춘 담백한 치킨."),

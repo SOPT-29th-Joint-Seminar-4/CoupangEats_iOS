@@ -27,10 +27,10 @@
 		3691C4E4273F97B800A712C9 /* UIColor++.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3691C4E3273F97B800A712C9 /* UIColor++.swift */; };
 		3691C4E6273F990F00A712C9 /* UITableView++.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3691C4E5273F990F00A712C9 /* UITableView++.swift */; };
 		3691C4E8273F996500A712C9 /* UICollectionView++.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3691C4E7273F996500A712C9 /* UICollectionView++.swift */; };
-		3691C4EC273F9A0900A712C9 /* dummy2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3691C4EB273F9A0900A712C9 /* dummy2.swift */; };
-		3691C4EA273F9A0100A712C9 /* dummy1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3691C4E9273F9A0100A712C9 /* dummy1.swift */; };
-		3691C4EE273F9A1200A712C9 /* dummy3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3691C4ED273F9A1200A712C9 /* dummy3.swift */; };
-		3691C4F0273F9A1B00A712C9 /* dummy4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3691C4EF273F9A1B00A712C9 /* dummy4.swift */; };
+		3691C4F0273F9A1B00A712C9 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		9AC75DF02748C43100A45ADD /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC75DEE2748C43100A45ADD /* TableViewCell.swift */; };
+		9AC75DF12748C43100A45ADD /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9AC75DEF2748C43100A45ADD /* TableViewCell.xib */; };
+		9AC75DF32748CCD800A45ADD /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC75DF22748CCD800A45ADD /* DataModel.swift */; };
 		E81458232744DCD3007C73A4 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81458222744DCD3007C73A4 /* TabBarViewController.swift */; };
 		E81458282744DD05007C73A4 /* SecondTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81458272744DD05007C73A4 /* SecondTabViewController.swift */; };
 		E814582A2744DD0E007C73A4 /* ThirdTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81458292744DD0E007C73A4 /* ThirdTabViewController.swift */; };
@@ -39,9 +39,6 @@
 		E81458322744E662007C73A4 /* UIView++.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81458312744E662007C73A4 /* UIView++.swift */; };
 		E81458342744E83E007C73A4 /* UIButton++.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81458332744E83E007C73A4 /* UIButton++.swift */; };
 		E81458362744EA04007C73A4 /* UILabel++.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81458352744EA04007C73A4 /* UILabel++.swift */; };
-		9AC75DF02748C43100A45ADD /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC75DEE2748C43100A45ADD /* TableViewCell.swift */; };
-		9AC75DF12748C43100A45ADD /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9AC75DEF2748C43100A45ADD /* TableViewCell.xib */; };
-		9AC75DF32748CCD800A45ADD /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC75DF22748CCD800A45ADD /* DataModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -104,6 +101,7 @@
 				3621517C273F92AB0021C0DD /* Products */,
 				9F9D8828AB30BABAFC835CF7 /* Pods */,
 				BB473E9E080597A122EEE50F /* Frameworks */,
+				3649EEE427508B2B0077E608 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -263,6 +261,15 @@
 			path = Xibs;
 			sourceTree = "<group>";
 		};
+		3649EEE427508B2B0077E608 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				3691C4EB273F9A0900A712C9 /* dummy2.swift */,
+				3691C4E9273F9A0100A712C9 /* dummy1.swift */,
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
 		3653F0D52748B1EE00701121 /* CVC */ = {
 			isa = PBXGroup;
 			children = (
@@ -384,7 +391,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				3656F77F274A0FC000AD332F /* CategoryCVC.xib in Resources */,
-				362151B7273F949E0021C0DD /* HomeView.storyboard in Resources */,
 				3656F786274A20A700AD332F /* selectCVC.xib in Resources */,
 				9AC75DF12748C43100A45ADD /* TableViewCell.xib in Resources */,
 				3621518B273F92AB0021C0DD /* LaunchScreen.storyboard in Resources */,
@@ -451,25 +457,21 @@
 				3691C4E8273F996500A712C9 /* UICollectionView++.swift in Sources */,
 				362151B5273F944A0021C0DD /* SubViewVC.swift in Sources */,
 				E81458342744E83E007C73A4 /* UIButton++.swift in Sources */,
-				362151AB273F93D70021C0DD /* dd.swift in Sources */,
 				E81458232744DCD3007C73A4 /* TabBarViewController.swift in Sources */,
 				3656F77E274A0FC000AD332F /* CategoryCVC.swift in Sources */,
-				3691C4F0273F9A1B00A712C9 /* dummy4.swift in Sources */,
+				3691C4F0273F9A1B00A712C9 /* (null) in Sources */,
 				3691C4E4273F97B800A712C9 /* UIColor++.swift in Sources */,
 				9AC75DF32748CCD800A45ADD /* DataModel.swift in Sources */,
 				3656F785274A20A700AD332F /* selectCVC.swift in Sources */,
 				3621517F273F92AB0021C0DD /* AppDelegate.swift in Sources */,
-				3691C4EE273F9A1200A712C9 /* dummy3.swift in Sources */,
 				E81458282744DD05007C73A4 /* SecondTabViewController.swift in Sources */,
 				E814582E2744DD1A007C73A4 /* FifthTabViewController.swift in Sources */,
 				3691C4E6273F990F00A712C9 /* UITableView++.swift in Sources */,
 				E81458322744E662007C73A4 /* UIView++.swift in Sources */,
 				36215181273F92AB0021C0DD /* SceneDelegate.swift in Sources */,
-				3691C4EC273F9A0900A712C9 /* dummy2.swift in Sources */,
 				E81458362744EA04007C73A4 /* UILabel++.swift in Sources */,
 				E814582C2744DD13007C73A4 /* FourthTabViewController.swift in Sources */,
 				E814582A2744DD0E007C73A4 /* ThirdTabViewController.swift in Sources */,
-				3691C4EA273F9A0100A712C9 /* dummy1.swift in Sources */,
 				362151B9273F94B60021C0DD /* HomeViewVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -620,7 +622,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = CLQU6VM4H9;
+				DEVELOPMENT_TEAM = U24ZACT97M;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CoupangEats_iOS/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -648,7 +650,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = CLQU6VM4H9;
+				DEVELOPMENT_TEAM = U24ZACT97M;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CoupangEats_iOS/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

@@ -82,6 +82,7 @@ class HomeViewVC: UIViewController {
     ///이미지뷰는 터치가 원래 안되니까 터치 가능하도록
     self.moremenuImage.isUserInteractionEnabled = true
     self.moremenuView.addGestureRecognizer(tapGestureRecognizer)
+
   }
 }
 
