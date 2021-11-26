@@ -26,7 +26,7 @@ class SubViewVC: UIViewController {
     }
     
     func initialSet() {
-        Separation.backgroundColor = UIColor.subtitleGray
+        Separation.backgroundColor = UIColor.backgroundGray
         let total : Int = contentList.count
         TotalLabel.text = "총 \(total)개"
     }

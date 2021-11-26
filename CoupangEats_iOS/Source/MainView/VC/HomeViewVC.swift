@@ -422,7 +422,6 @@ extension HomeViewVC {
     }
   }
   @objc func moremenuButtonClicked(_ sender: UITapGestureRecognizer) {
-    print("d")
     guard let subVC = UIStoryboard(name: "SubView", bundle: nil).instantiateViewController(withIdentifier: "SubViewVC") as? SubViewVC else {return}
     self.navigationController?.pushViewController(subVC, animated: true)
   }
