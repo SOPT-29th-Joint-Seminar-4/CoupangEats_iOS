@@ -13,7 +13,7 @@ class SubViewVC: UIViewController {
     @IBOutlet weak var Separation: UIView!
     @IBOutlet weak var TotalLabel: UILabel!
     @IBOutlet weak var backButton: UIButton!
-    @IBOutlet weak var navBar: UIButton!
+    @IBOutlet weak var NavBar: UIImageView!
     
     var contentList: [ContentData] = [];
     
