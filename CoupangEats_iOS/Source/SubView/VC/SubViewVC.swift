@@ -13,6 +13,7 @@ class SubViewVC: UIViewController {
     @IBOutlet weak var Separation: UIView!
     @IBOutlet weak var TotalLabel: UILabel!
     @IBOutlet weak var backButton: UIButton!
+    @IBOutlet weak var navBar: UIButton!
     
     var contentList: [ContentData] = [];
     
@@ -34,8 +35,10 @@ class SubViewVC: UIViewController {
         let xibName = UINib(nibName: TableViewCell.identifier, bundle: nil)
         TableView.register(xibName, forCellReuseIdentifier: TableViewCell.identifier)
     }
+
     @IBAction func backButtonClicked(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
+
     }
     
     func initContentList() {
