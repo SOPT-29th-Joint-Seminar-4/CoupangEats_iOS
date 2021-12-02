@@ -9,4 +9,5 @@ target 'CoupangEats_iOS' do
 pod 'Alamofire'
 pod 'SnapKit'
 pod 'Then'
+pod 'Kingfisher'
 end

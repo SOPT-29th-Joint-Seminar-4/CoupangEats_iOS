@@ -9,14 +9,17 @@ import UIKit
 
 import SnapKit
 import Then
+import Kingfisher
 
 
 //MARK: - HomeViewVC
 class HomeViewVC: UIViewController {
     
+    var bannerList: [BannerDataModel] = []
     var categoryList: [CategoryModel] = []
-    var eatsList: [inEatsModel] = []
+    var eatsList: [ShopDataModel] = []
     var selectList: [selectDataModel] = []
+    var isLike: Bool = true
 
 
 //MARK: -DataModel
@@ -34,13 +37,6 @@ class HomeViewVC: UIViewController {
             CategoryModel(imageName: "dessert", category: "디저트")
         ])
         
-        eatsList.append(contentsOf: [
-            inEatsModel(imageName: "img_store1", title: "피자헛", time: "20~25분", star: "4.8(4,805)", lenght: "2.2km", isFree: true),
-            inEatsModel(imageName: "img_store2", title: "세인트 버거", time: "15~20분", star: "4.6(1,005)", lenght: "1.5km", isFree: true),
-            inEatsModel(imageName: "img_store3", title: "페이브", time: "19~29분", star: "4.9(2,832)", lenght: "1.3km", isFree: true),
-            inEatsModel(imageName: "img_store4", title: "리미니", time: "23~33분", star: "4.8(2,126)", lenght: "1.8km", isFree: true),
-            inEatsModel(imageName: "img_store1", title: "샐러디", time: "15~25분", star: "4.7(562)", lenght: "1.4km", isFree: true)
-        ])
         
         selectList.append(contentsOf: [
             selectDataModel(title: "추천순", isImage: true),
@@ -99,12 +95,16 @@ class HomeViewVC: UIViewController {
   }()
   let choiceEatsImageView1 = UIImageView()
   let choiceEatsImageView2 = UIImageView()
+    
+    
   
   
   //MARK: - LifeCycle
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    getBannerData()
+    getShopData()
     initList()
     view.backgroundColor = .white
     navigationController?.navigationBar.isHidden = true
@@ -124,6 +124,60 @@ class HomeViewVC: UIViewController {
     self.moremenuView.addGestureRecognizer(tapGestureRecognizer)
 
   }
+//MARK: -Server
+    func getBannerData(){
+        GetBannerDataService.bannerData.getBannerInfo{ (response) in
+            switch response
+            {
+            case .success(let data) :
+                if let response = data as? BannerDataModel {
+                    DispatchQueue.global().sync {
+                        self.bannerList.append(response)
+                    }
+                        guard let url = URL(string: self.bannerList[0].data[0].image) else { return }
+                        self.advertiseImage.kf.indicatorType = .activity
+                        self.advertiseImage.kf.setImage(with: url)
+                }
+            case .requestErr(let message):
+                print("requestERR")
+            case .pathErr:
+                print("pathERR")
+            case .serverErr:
+                print("serverERR")
+            case .networkFail:
+                print("networkFail")
+            }
+            
+        }
+    }
+    func getShopData(){
+        GetShopDataService.shopData.getShopInfo{ (response) in
+            switch response
+            {
+            case .success(let data) :
+                if let response = data as? ShopDataModel {
+                    DispatchQueue.global().async {
+                        self.eatsList.append(response)
+                    }
+                    self.onlyEatsCollectionView.reloadData()
+                    
+                }
+            case .requestErr(let message):
+                print("requestERR")
+            case .pathErr:
+                print("pathERR")
+            case .serverErr:
+                print("serverERR")
+            case .networkFail:
+                print("networkFail")
+            }
+            
+        }
+    }
+    
+    
+    
+    
 }
 
 //MARK: - Extension
@@ -476,7 +530,12 @@ extension HomeViewVC : UICollectionViewDataSource {
       return 10
     }
     if collectionView == onlyEatsCollectionView {
-      return 5
+        if eatsList.count == 0{
+            return 0;
+        }
+        else{
+            return eatsList[0].data.count
+        }
     }
     if collectionView == choicefilterCollectionView {
       return 6
@@ -495,7 +554,13 @@ extension HomeViewVC : UICollectionViewDataSource {
     }
     if collectionView == onlyEatsCollectionView  {
       guard let InEatsCVC = collectionView.dequeueReusableCell(withReuseIdentifier: InEatsCVC.identifier, for: indexPath) as? InEatsCVC else {return UICollectionViewCell() }
-        InEatsCVC.getData(image: eatsList[indexPath.row].imageName, heart: true, title: eatsList[indexPath.row].title, time: eatsList[indexPath.row].time, star: eatsList[indexPath.row].star, distance: eatsList[indexPath.row].lenght, freeRide: eatsList[indexPath.row].isFree)
+        InEatsCVC.getData(image: eatsList[0].data[indexPath.row].image,
+                          title: eatsList[0].data[indexPath.row].name,
+                          time: String(eatsList[0].data[indexPath.row].deliveryTime)+"분",
+                          star: String(eatsList[0].data[indexPath.row].rating) + "(" + String(eatsList[0].data[indexPath.row].comments) + ")",
+                          distance: String(eatsList[0].data[indexPath.row].distance) + "km",
+                          freeRide: eatsList[0].data[indexPath.row].isFree,
+                          id: eatsList[0].data[indexPath.row].id)
       InEatsCVC.awakeFromNib()
       return InEatsCVC
     }
@@ -507,4 +572,14 @@ extension HomeViewVC : UICollectionViewDataSource {
     }
     return UICollectionViewCell()
   }
+}
+
+extension HomeViewVC: likeClcikedDelegate{
+    func isLikeClicked() {
+        print("딜리게이트")
+        sleep(1)
+        onlyEatsCollectionView.reloadData()
+    }
+    
+    
 }
