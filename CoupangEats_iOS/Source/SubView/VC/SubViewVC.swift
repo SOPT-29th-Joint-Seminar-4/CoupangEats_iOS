@@ -16,6 +16,36 @@ class SubViewVC: UIViewController {
     @IBOutlet weak var backButton: UIButton!
     
   var contentList: [ContentData] = [];
+    
+    
+    
+    //server
+    func getMenu() {
+       let task = URLSession.shared.dataTask(with: URL(string: "https://asia-northeast3-wesopt29-e30ad.cloudfunctions.net/api/menu/")!) { (data, response, error) in
+           
+           if let dataJson = data {
+               
+                //json parsing
+                do {
+                    let json = try JSONSerialization.jsonObject(with: dataJson, options: []) as! Dictionary<String, Any>
+                    
+                    //Dictionary
+                    let data = json["data"] as! Array<Dictionary<String,Any>>                    
+                    for (idx, value) in data.enumerated() {
+                        if let v = value as? Dictionary <String, Any> {
+                            print("\(v["name"])")
+                        }
+                    }
+                }
+                catch {}
+            }
+        }
+        task.resume()
+    }
+    
+    
+    
+    //viesDidLoad
   override func viewDidLoad() {
     super.viewDidLoad()
     initContentList()
@@ -23,6 +53,7 @@ class SubViewVC: UIViewController {
     TableView.delegate = self
     TableView.dataSource = self
     initialSet()
+      getMenu()
     
   }
   
