@@ -35,10 +35,11 @@
 <br>
 <br>
 <br>
-💥 클서세미나 구현영상임둥 ㅋㅋ 일단 메인뷰부터 공개 ㅋㅋ
+💥 클서세미나 구현영상임둥 ㅋㅋ 왼쪽은 메인뷰 ㅋㅋ 오른쪽은 서브뷰 ㅋ
 <br>
 <br>
 <img src = "https://user-images.githubusercontent.com/63863135/144615271-637b572b-8d87-4d0a-b44f-98efee17af73.gif" width = "300px;" alt =""/>
+<img src = "https://user-images.githubusercontent.com/63863135/144619864-32e69767-f6d8-4ed1-ac38-41143a44bc6e.gif" width = "300px;" alt =""/>
 <br>
 
 
