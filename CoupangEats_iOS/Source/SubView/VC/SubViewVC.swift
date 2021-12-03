@@ -9,9 +9,9 @@ import UIKit
 
 class SubViewVC: UIViewController {
   
-  @IBOutlet weak var TableView: UITableView!
-  @IBOutlet weak var Separation: UIView!
-  @IBOutlet weak var TotalLabel: UILabel!
+    @IBOutlet weak var TableView: UITableView!
+    @IBOutlet weak var Separation: UIView!
+    @IBOutlet weak var TotalLabel: UILabel!
     @IBOutlet weak var navBarImage: UIImageView!
     @IBOutlet weak var backButton: UIButton!
     
@@ -65,13 +65,16 @@ extension SubViewVC: UITableViewDataSource {
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+      
     guard let cell = tableView.dequeueReusableCell(withIdentifier: TableViewCell.identifier) as? TableViewCell else { return UITableViewCell() }
+      
     if cell.ThumbnailImageView == nil {
       print("nil이다")
       cell.ThumbnailImageView.image = UIImage(named: "ChickenImage")
     } else {
       cell.ThumbnailImageView.image = UIImage(named: "ChickenImage")}
-    cell.setData(appData : contentList[indexPath.row])
-    return cell
+      cell.setData(appData : contentList[indexPath.row])
+      cell.setLayout()
+      return cell
   }
 }

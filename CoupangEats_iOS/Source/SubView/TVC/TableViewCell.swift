@@ -43,6 +43,14 @@ class TableViewCell: UITableViewCell {
     PriceLabel.text = appData.price
     DescriptionLabel.text = appData.description
   }
+    
+    func setLayout() {
+        StoreLabel.font = UIFont.boldSystemFont(ofSize: 13)
+        CountLabel.font = UIFont.boldSystemFont(ofSize: 13)
+        CountLabel.textColor = UIColor.mainOrange
+        PriceLabel.font = UIFont.boldSystemFont(ofSize: 13)
+        DescriptionLabel.textColor = UIColor.subtitleGray
+    }
 }
 
 extension TableViewCell {
