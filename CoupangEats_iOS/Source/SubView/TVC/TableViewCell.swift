@@ -121,6 +121,8 @@ extension TableViewCell {
       $0.snp.makeConstraints {
         $0.top.greaterThanOrEqualTo(self.PriceLabel.snp.bottom).offset(5)
         $0.leading.equalTo(self.ThumbnailImageView.snp.trailing).offset(12)
+          $0.width.equalTo(232)
+
       }
     }
   }
