@@ -26,14 +26,22 @@
 
 ## 📺 Final Screen
 
-구현영상임둥 ㅋㅋ 쩐다 ㅋㅋ
+☄️ 클디세미나 구현영상임둥 ㅋㅋ 쩐다 ㅋㅋ
+<br>
 <br>
 <img src = "https://user-images.githubusercontent.com/63863135/143546679-730a96d9-c61a-4923-98b5-a812617d9221.gif" width = "300px;" alt =""/>
-<br>
-<br>
 &nbsp;<img src="https://user-images.githubusercontent.com/63863135/143547141-141f629d-1691-4918-bea1-14590151aad5.png" width="300px;" alt=""/> 
 &nbsp;<img src="https://user-images.githubusercontent.com/63863135/143546819-5a0b2248-9e0a-4e4e-803b-e3325dbe4ed0.png" width="300px;" alt=""/>
 <br>
+<br>
+<br>
+💥 클서세미나 구현영상임둥 ㅋㅋ 일단 메인뷰부터 공개 ㅋㅋ
+<br>
+<br>
+<img src = "https://user-images.githubusercontent.com/63863135/144615271-637b572b-8d87-4d0a-b44f-98efee17af73.gif" width = "300px;" alt =""/>
+<br>
+
+
 
 
 ## ⚙️ Development Environment
