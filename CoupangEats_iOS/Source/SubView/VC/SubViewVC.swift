@@ -128,12 +128,14 @@ extension SubViewVC: UITableViewDataSource {
               }
               if let thumbnail = r["image"] as? String {
                   let url = URL(string: thumbnail)
-                  DispatchQueue.global().async {
-                      let data = try? Data(contentsOf: url!)
-                      DispatchQueue.main.async {
-                          cell.ThumbnailImageView.image = UIImage(data: data!)
-                      }
-                  }
+//                  DispatchQueue.global().async {
+//                      let data = try? Data(contentsOf: url!)
+//                      DispatchQueue.main.async {
+//                          cell.ThumbnailImageView.image = UIImage(data: data!)
+//                      }
+//                  }
+                  cell.ThumbnailImageView.kf.indicatorType = .activity
+                  cell.ThumbnailImageView.kf.setImage(with: url)
               }
           }
       }
