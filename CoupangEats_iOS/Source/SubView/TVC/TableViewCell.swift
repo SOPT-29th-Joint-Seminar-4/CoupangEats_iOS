@@ -79,7 +79,9 @@ extension TableViewCell {
   }
   func layoutStoreLabel() {
     self.contentView.add(StoreLabel) {
-      $0.setupLabel(text: "둘둘치킨 서현점", color: .black, font: .systemFont(ofSize: 13, weight: .regular))
+        $0.setupLabel(text: "둘둘치킨 서현점", color: .black, font: .systemFont(ofSize: 13, weight: .bold))
+//        StoreLabel.font = UIFont.boldSystemFont(ofSize: 13)
+
       $0.snp.makeConstraints {
         $0.top.greaterThanOrEqualTo(self.ThumbnailImageView.snp.top)
         $0.leading.equalTo(self.ThumbnailImageView.snp.trailing).offset(12)
@@ -97,7 +99,9 @@ extension TableViewCell {
   }
   func layoutCountLabel() {
     self.contentView.add(CountLabel) {
-      $0.setupLabel(text: "46명이 만족한 메뉴", color: .black, font: .systemFont(ofSize: 13, weight: .regular))
+      $0.setupLabel(text: "46명이 만족한 메뉴", color: .mainOrange, font: .systemFont(ofSize: 13, weight: .bold))
+//        CountLabel.font = UIFont.boldSystemFont(ofSize: 13)
+//        CountLabel.textColor = UIColor.mainOrange
       $0.snp.makeConstraints {
         $0.top.greaterThanOrEqualTo(self.MenuLabel.snp.bottom).offset(5)
         $0.leading.equalTo(self.ThumbnailImageView.snp.trailing).offset(12)
@@ -107,6 +111,8 @@ extension TableViewCell {
   func layoutPriceLabel() {
     self.contentView.add(PriceLabel) {
       $0.setupLabel(text: "18000원", color: .black, font: .systemFont(ofSize: 13, weight: .regular))
+//        PriceLabel.font = UIFont.boldSystemFont(ofSize: 13)
+
       $0.snp.makeConstraints {
         $0.top.greaterThanOrEqualTo(self.CountLabel.snp.bottom)
         $0.leading.equalTo(self.ThumbnailImageView.snp.trailing).offset(12)
@@ -115,12 +121,16 @@ extension TableViewCell {
   }
   func layoutDescriptionLabel() {
     self.contentView.add(DescriptionLabel) {
-      $0.setupLabel(text: "새 식용유를 매일 사용하여 건강하고 깨끗한 맛,\n얇은 튀김옷으로 칼로리를 낮춘 담백한 치킨.", color: .tagGray, font: .systemFont(ofSize: 13, weight: .regular))
+      $0.setupLabel(text: "새 식용유를 매일 사용하여 건강하고 깨끗한 맛,\n얇은 튀김옷으로 칼로리를 낮춘 담백한 치킨.", color: .subtitleGray, font: .systemFont(ofSize: 13, weight: .regular))
+//        DescriptionLabel.textColor = UIColor.subtitleGray
+
       $0.numberOfLines = 2
       $0.textAlignment = .center
       $0.snp.makeConstraints {
         $0.top.greaterThanOrEqualTo(self.PriceLabel.snp.bottom).offset(5)
         $0.leading.equalTo(self.ThumbnailImageView.snp.trailing).offset(12)
+          $0.width.equalTo(232)
+
       }
     }
   }
