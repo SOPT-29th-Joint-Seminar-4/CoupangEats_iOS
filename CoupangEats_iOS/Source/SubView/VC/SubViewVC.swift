@@ -21,6 +21,7 @@ class SubViewVC: UIViewController {
     
     //server
     var menuData : Array<Dictionary<String,Any>>?
+    var total : Int = 0
     
     func getMenu() {
        let task = URLSession.shared.dataTask(with: URL(string: "https://asia-northeast3-wesopt29-e30ad.cloudfunctions.net/api/menu/")!) { (data, response, error) in
@@ -60,7 +61,8 @@ class SubViewVC: UIViewController {
   
   func initialSet() {
     Separation.backgroundColor = UIColor.backgroundGray
-    let total : Int = contentList.count
+//    let total : Int = contentList.count
+      let total : Int = total
     TotalLabel.text = "총 \(total)개"
   }
   func registerXib() {
@@ -105,6 +107,9 @@ extension SubViewVC: UITableViewDataSource {
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
       
     guard let cell = tableView.dequeueReusableCell(withIdentifier: TableViewCell.identifier) as? TableViewCell else { return UITableViewCell() }
+      
+      total += 1
+      initialSet()
       
       let idx = indexPath.row
       if let menu = menuData {
